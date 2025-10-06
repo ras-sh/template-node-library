@@ -41,7 +41,8 @@
     "fix": "ultracite fix --unsafe",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "prepublishOnly": "pnpm check && pnpm check-types && pnpm test && pnpm build"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
