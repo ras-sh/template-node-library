@@ -33,6 +33,9 @@ pnpm dev
 | `pnpm check-types` | Run TypeScript type checking |
 | `pnpm check` | Run linter checks |
 | `pnpm fix` | Auto-fix linting issues |
+| `pnpm changeset` | Create a new changeset |
+| `pnpm version` | Update versions based on changesets |
+| `pnpm release` | Build and publish to npm |
 
 ## Project Structure
 
@@ -45,9 +48,32 @@ tests/
 
 ## Publishing
 
-1. Update version in `package.json`
-2. Run `pnpm build`
-3. Run `pnpm publish`
+This template uses [Changesets](https://github.com/changesets/changesets) for version management and publishing.
+
+### Release Workflow
+
+1. **Create a changeset** when you make changes:
+   ```bash
+   pnpm changeset
+   ```
+   Follow the prompts to describe your changes (patch, minor, or major).
+
+2. **Version packages** to update `package.json` and generate changelog:
+   ```bash
+   pnpm version
+   ```
+
+3. **Commit the changes**:
+   ```bash
+   git add .
+   git commit -m "chore: version packages"
+   ```
+
+4. **Publish to npm**:
+   ```bash
+   pnpm release
+   ```
+   This will build and publish your package to npm.
 
 ## License
 
