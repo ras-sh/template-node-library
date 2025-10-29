@@ -5,12 +5,10 @@
 ## Features
 
 - **TypeScript** - Full type safety with modern TS features
-- **[tsup](https://tsup.egoist.dev/)** - Fast, zero-config bundler powered by esbuild
+- **[tsdown](https://tsdown.dev/)** - Fast, zero-config bundler powered by Rolldown
 - **[Vitest](https://vitest.dev/)** - Fast unit testing with coverage reports
-- **[tsx](https://tsx.is/)** - Fast TypeScript execution for development
 - **[Changesets](https://github.com/changesets/changesets)** - Automated version management and changelog generation
 - **GitHub Actions** - Automated CI/CD workflows for testing and publishing
-- **Pre-publish safety** - Automatic checks before publishing to prevent broken releases
 
 ## Quick Start
 
@@ -30,15 +28,15 @@ pnpm dev
 | Command | Description |
 |---------|-------------|
 | `pnpm dev` | Run with tsx in watch mode |
-| `pnpm build` | Build library with tsup |
+| `pnpm build` | Build library with tsdown |
 | `pnpm test` | Run tests with vitest |
 | `pnpm test:coverage` | Run tests with coverage report |
 | `pnpm check-types` | Run TypeScript type checking |
 | `pnpm check` | Run linter checks |
 | `pnpm fix` | Auto-fix linting issues |
 | `pnpm changeset` | Create a new changeset |
-| `pnpm version` | Update versions based on changesets |
-| `pnpm release` | Build and publish to npm |
+| `pnpm changeset:version` | Update versions based on changesets |
+| `pnpm changeset:publish` | Build and publish to npm |
 
 ## Project Structure
 
